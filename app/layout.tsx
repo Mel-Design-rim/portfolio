@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Playfair_Display, Rethink_Sans, Space_Mono } from 'next/font/google';
+import { Mr_Dafoe, Playfair_Display, Rethink_Sans, Space_Mono } from 'next/font/google';
 import './globals.css';
 
 const playfair = Playfair_Display({
@@ -20,6 +20,12 @@ const spaceMono = Space_Mono({
   weight: ['400', '700'],
 });
 
+const mrDafoe = Mr_Dafoe({
+  subsets: ['latin'],
+  variable: '--font-script',
+  weight: '400',
+});
+
 export const metadata: Metadata = {
   title: 'Cheikh Malainine Aboubacrin — Fullstack Developer & Digital Designer in Nouakchott',
   description:
@@ -34,7 +40,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className={`${playfair.variable} ${rethink.variable} ${spaceMono.variable}`}>
+      <body className={`${playfair.variable} ${rethink.variable} ${spaceMono.variable} ${mrDafoe.variable}`}>
         {children}
       </body>
     </html>

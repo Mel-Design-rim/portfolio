@@ -15,11 +15,10 @@ export default function Hero() {
     const floats = hero.querySelectorAll<HTMLElement>('.float-item');
 
     // entrance after the loader curtains open
-    const back = hero.querySelector('.hero-layer-back');
-    const front = hero.querySelector('.hero-layer-front');
+    const layers = hero.querySelectorAll('.hero-title span');
     const label = hero.querySelector('.hero-label');
     const subtitle = hero.querySelector('.hero-subtitle');
-    gsap.set([back, front], { y: 90, opacity: 0, filter: 'blur(10px)' });
+    gsap.set(layers, { y: 90, opacity: 0, filter: 'blur(10px)' });
     gsap.set([label, subtitle], { y: 24, opacity: 0 });
     gsap.set(floats, { opacity: 0 });
 
@@ -30,8 +29,11 @@ export default function Hero() {
       gsap
         .timeline()
         .to(label, { y: 0, opacity: 1, duration: 0.7, ease: 'power3.out' })
-        .to(back, { y: 0, opacity: 1, filter: 'blur(0px)', duration: 1.1, ease: 'power4.out' }, '-=0.35')
-        .to(front, { y: 0, opacity: 1, filter: 'blur(0px)', duration: 1.1, ease: 'power4.out' }, '-=0.85')
+        .to(
+          layers,
+          { y: 0, opacity: 1, filter: 'blur(0px)', duration: 1.1, stagger: 0.22, ease: 'power4.out' },
+          '-=0.35'
+        )
         .to(subtitle, { y: 0, opacity: 1, duration: 0.8, ease: 'power3.out' }, '-=0.6')
         .to(floats, { opacity: 1, duration: 0.8, stagger: 0.15 }, '-=0.5');
     };
@@ -93,9 +95,11 @@ export default function Hero() {
       <div className="hero-content">
         <div className="hero-label mono uppercase">Top Secret // Case #2026</div>
         <h1 className="hero-title serif">
-          <span className="hero-layer-back">MEL</span>
+          <span className="hero-script">Cheikh</span>
           <br />
-          <span className="hero-layer-front">DESIGN</span>
+          <span className="hero-layer-back">MALAYNINE</span>
+          <br />
+          <span className="hero-layer-front">ABOUBACRINE</span>
         </h1>
         <div className="hero-subtitle">
           <span>Fullstack</span> Developer &amp; <span>Digital</span> Designer.

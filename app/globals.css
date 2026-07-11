@@ -276,7 +276,7 @@ section { position: relative; }
   padding: 6px 18px; font-size: 0.62rem; letter-spacing: 4px; margin-bottom: 2.5rem;
 }
 .hero-title {
-  font-size: clamp(4rem, 15vw, 13rem); line-height: 0.95; font-weight: 700;
+  font-size: clamp(2.6rem, 11vw, 10.5rem); line-height: 0.95; font-weight: 700;
   color: #f2f2f2; letter-spacing: 2px;
 }
 .hero-title span { display: inline-block; will-change: transform, filter; }
@@ -790,3 +790,24 @@ section { position: relative; }
   transition: filter 0.5s;
 }
 .scanner-frame-profile:hover .photo-img-profile { filter: grayscale(0.2) contrast(1.02) brightness(0.95); }
+
+/* ============================================================
+   HERO SCRIPT — handwritten "Cheikh" signature over the name
+   ============================================================ */
+.hero-script {
+  font-family: var(--font-script), cursive;
+  font-weight: 400;
+  font-size: 0.62em;
+  line-height: 0.8;
+  color: var(--accent-red);
+  text-transform: none;
+  letter-spacing: 0.02em;
+  display: inline-block;
+  transform: rotate(-7deg);
+  margin-bottom: -0.32em;
+  position: relative;
+  z-index: 2;
+  text-shadow: 0 0 30px rgba(42, 141, 255, 0.35);
+}
+.hero-title .hero-layer-back,
+.hero-title .hero-layer-front { position: relative; z-index: 1; }
