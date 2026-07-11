@@ -78,7 +78,7 @@ export default function Hero() {
         </div>
         <div className="float-item f-photo">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/assets/images/kalimat-1.jpg" className="f-img" alt="design evidence" />
+          <img src="/assets/images/profile.jpg" className="f-img" alt="design evidence" />
           <span className="mono">EVIDENCE_A.jpg</span>
         </div>
         <div className="float-item f-code mono">

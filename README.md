@@ -2,7 +2,7 @@
 
 > TOP SECRET // CASE #2026 — a tech-noir investigation-themed portfolio.
 
-Personal portfolio of **Mel Design Rim** (Cheikh Malaynine Aboubacrin) — Fullstack Developer & Digital Designer based in Nouakchott, Mauritania.
+Personal portfolio of **CHEIKH MALAYNINE ABOUBACRIN** (Cheikh Malaynine Aboubacrin) — Fullstack Developer & Digital Designer based in Nouakchott, Mauritania.
 
 **Design language:** dark evidence-board aesthetic — HUD overlays, custom cursor, red investigation thread drawn on scroll, decryption loader and an "EVIDENCE BOARD" project slider.
 
@@ -54,4 +54,4 @@ npm run build     # production build
 
 ---
 
-© 2026 MEL DESIGN RIM — SECURE LINE ESTABLISHED
+© 2026 CHEIKH MALAYNINE ABOUBACRIN

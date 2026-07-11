@@ -29,11 +29,12 @@ export default function Loader() {
   const [activeLine, setActiveLine] = useState(0);
 
   useEffect(() => {
-    setCells(Array.from({ length: 16 }, () => Math.floor(Math.random() * 90) + 10));
-
     const wrap = wrapRef.current;
     if (!wrap) return;
 
+    const cellsFrame = requestAnimationFrame(() => {
+      setCells(Array.from({ length: 16 }, () => Math.floor(Math.random() * 90) + 10));
+    });
     const freqInterval = setInterval(() => {
       setFreq((10 + Math.random() * 8).toFixed(1));
     }, 180);
@@ -64,6 +65,7 @@ export default function Loader() {
       });
 
     return () => {
+      cancelAnimationFrame(cellsFrame);
       tl.kill();
       clearInterval(freqInterval);
       clearInterval(lineInterval);

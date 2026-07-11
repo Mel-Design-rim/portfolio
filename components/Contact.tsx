@@ -50,7 +50,7 @@ export default function Contact() {
         <div className="mono contact-footer">
           SECURE LINE ESTABLISHED
           <br />
-          <span>© 2026 MEL DESIGN RIM</span>
+          <span>© 2026 CHEIKH MALAYNINE ABOUBACRIN</span>
         </div>
       </div>
     </section>

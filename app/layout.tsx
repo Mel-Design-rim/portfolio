@@ -23,7 +23,7 @@ const spaceMono = Space_Mono({
 export const metadata: Metadata = {
   title: 'Cheikh Malainine Aboubacrin — Fullstack Developer & Digital Designer in Nouakchott',
   description:
-    'Mel Design Rim — Fullstack Developer & Digital Designer. Backend rigor, frontend interactivity & visual production. Based in Nouakchott, Mauritania.',
+    'CHEIKH MALAYNINE ABOUBACRIN — Fullstack Developer & Digital Designer. Backend rigor, frontend interactivity & visual production. Based in Nouakchott, Mauritania.',
   openGraph: {
     title: 'MEL DESIGN — Fullstack Developer & Digital Designer',
     description: 'Web development, AI, UI/UX and media production. Top Secret // Case #2026.',

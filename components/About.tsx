@@ -13,7 +13,7 @@ export default function About() {
       <div className="profiler-container">
         {/* -------- identity -------- */}
         <div className="profiler-module col-identity" data-reveal>
-          <div className="identity-name mono">MEL DESIGN RIM</div>
+          <div className="identity-name mono">CHEIKH MALAYNINE ABOUBACRIN</div>
           <div className="fingerprint-scanner">
             <div className="scanner-frame-profile">
               <div className="scanner-grid-overlay-profile"></div>

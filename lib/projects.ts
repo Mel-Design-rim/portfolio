@@ -69,7 +69,7 @@ export const PROJECTS: Project[] = [
     evidence: [],
   },
   {
-    id: 'doit',
+    id: 'do-it',
     category: 'dev',
     title: 'do-it',
     type: 'macOS Application',
