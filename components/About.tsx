@@ -23,22 +23,12 @@ export default function About() {
                 <div className="ft-corner ft-bl"></div>
                 <div className="ft-corner ft-br"></div>
               </div>
-              <svg className="photo-silhouette" viewBox="0 0 200 240" aria-label="Classified identity">
-                <rect width="200" height="240" fill="#0d0d0d" />
-                <circle cx="100" cy="88" r="42" fill="#1c1c1c" />
-                <path d="M30 240 C30 165 170 165 170 240 Z" fill="#1c1c1c" />
-                <text
-                  x="100"
-                  y="132"
-                  textAnchor="middle"
-                  fontFamily="monospace"
-                  fontSize="13"
-                  fill="#2a8dff"
-                  letterSpacing="2"
-                >
-                  CLASSIFIED
-                </text>
-              </svg>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/assets/images/profile.jpg"
+                alt="Cheikh Malainine Aboubacrin — Mel Design"
+                className="photo-img-profile"
+              />
               <div className="scan-data-profile data-top mono">REC_ACTIVE [●]</div>
               <div className="scan-data-profile data-bot mono">ID_MATCH: 99.9%</div>
               <div className="scan-beam"></div>

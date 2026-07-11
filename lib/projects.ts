@@ -7,6 +7,7 @@ export interface Project {
   id: string;
   title: string;
   type: string;
+  category: 'dev' | 'design';
   image: string;
   year: string;
   context: string;
@@ -24,6 +25,7 @@ export interface Project {
 export const PROJECTS: Project[] = [
   {
     id: 'absat',
+    category: 'dev',
     title: 'Absat',
     type: 'Web Platform',
     image: '/assets/images/absat-cover.svg',
@@ -44,6 +46,7 @@ export const PROJECTS: Project[] = [
   },
   {
     id: 'aoun',
+    category: 'dev',
     title: 'Aoun',
     type: 'Marketplace App',
     image: '/assets/images/aoun-cover.svg',
@@ -67,6 +70,7 @@ export const PROJECTS: Project[] = [
   },
   {
     id: 'doit',
+    category: 'dev',
     title: 'do-it',
     type: 'macOS Application',
     image: '/assets/images/doit-cover.svg',
@@ -87,6 +91,7 @@ export const PROJECTS: Project[] = [
   },
   {
     id: '7alen',
+    category: 'design',
     title: '7alen',
     type: 'Brand Campaign',
     image: '/assets/images/7alen-cover.jpg',
@@ -107,6 +112,7 @@ export const PROJECTS: Project[] = [
   },
   {
     id: 'slash',
+    category: 'design',
     title: 'Slash Sport',
     type: 'Brand Identity',
     image: '/assets/images/slash-cover.jpg',
@@ -127,6 +133,7 @@ export const PROJECTS: Project[] = [
   },
   {
     id: 'sava',
+    category: 'design',
     title: 'Sava FC',
     type: 'Club Identity',
     image: '/assets/images/sava-logo.jpg',
@@ -147,6 +154,7 @@ export const PROJECTS: Project[] = [
   },
   {
     id: 'kalimat',
+    category: 'design',
     title: 'Kalimat',
     type: 'Typography Series',
     image: '/assets/images/kalimat-1.jpg',
@@ -167,6 +175,7 @@ export const PROJECTS: Project[] = [
   },
   {
     id: 'techforge',
+    category: 'design',
     title: 'TechForge',
     type: 'Club Branding',
     image: '/assets/images/techforge-rollup.jpg',
@@ -185,29 +194,7 @@ export const PROJECTS: Project[] = [
     links: [],
     evidence: ['/assets/images/design-1.jpg'],
   },
-  {
-    id: 'motion',
-    title: 'Motion Work',
-    type: 'Video Production',
-    image: '/assets/images/alakhbar-promo.jpg',
-    year: '2023—2026',
-    context: 'Professional',
-    client: 'Media Agencies & Productions',
-    duration: 'Continuous',
-    tags: ['Video', 'Montage', 'Broadcast', 'Audio'],
-    stack: ['Premiere Pro', 'After Effects', 'Audition', 'Suno', 'Whisper'],
-    mission:
-      'Video editing, motion design and audio production for media agencies, TV-style shows and social platforms — from show openers and promos to full episode post-production.',
-    analysis:
-      'Work spans broadcast promos (like the Al Akhbar evening show), social media reels, sound treatment and AI-assisted workflows (transcription with Whisper, music prompting with Suno) integrated into professional production pipelines.',
-    intervention:
-      'I handled editing, rhythm and pacing, motion graphics, color and audio treatment, and designed the accompanying promotional visuals for each production.',
-    links: [
-      { label: 'SHOWREEL_01', url: 'https://youtu.be/MDwNX87AvHw' },
-      { label: 'SHOWREEL_02', url: 'https://youtu.be/RYE__g4Gbbs' },
-      { label: 'SHOWREEL_03', url: 'https://youtu.be/h6ib0fGl0Mw' },
-      { label: 'FB_PRODUCTION', url: 'https://www.facebook.com/share/v/1DE9cr32KY/' },
-    ],
-    evidence: ['/assets/images/design-2.jpg', '/assets/images/design-3.jpg'],
-  },
 ];
+
+export const DEV_PROJECTS = PROJECTS.filter((p) => p.category === 'dev');
+export const DESIGN_PROJECTS = PROJECTS.filter((p) => p.category === 'design');

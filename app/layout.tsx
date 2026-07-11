@@ -21,7 +21,7 @@ const spaceMono = Space_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'MEL DESIGN — Fullstack Developer & Digital Designer in Nouakchott',
+  title: 'Cheikh Malainine Aboubacrin — Fullstack Developer & Digital Designer in Nouakchott',
   description:
     'Mel Design Rim — Fullstack Developer & Digital Designer. Backend rigor, frontend interactivity & visual production. Based in Nouakchott, Mauritania.',
   openGraph: {

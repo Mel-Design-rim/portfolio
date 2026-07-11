@@ -4,11 +4,19 @@
 
 import { useCallback, useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
-import { PROJECTS, type Project } from '@/lib/projects';
+import { type Project } from '@/lib/projects';
 
 const pad = (n: number) => String(n).padStart(2, '0');
 
-export default function EvidenceBoard() {
+interface EvidenceBoardProps {
+  sectionId: string;
+  title: string;
+  sectorMeta: string;
+  badgeLabel: string;
+  projects: Project[];
+}
+
+export default function EvidenceBoard({ sectionId, title, sectorMeta, badgeLabel, projects }: EvidenceBoardProps) {
   const [view, setView] = useState<'slider' | 'list'>('slider');
   const [selected, setSelected] = useState<Project | null>(null);
   const [lightboxSrc, setLightboxSrc] = useState<string | null>(null);
@@ -90,15 +98,15 @@ export default function EvidenceBoard() {
     return () => window.removeEventListener('keydown', onKey);
   }, [selected, lightboxSrc, closeProject]);
 
-  const strips = [...PROJECTS, ...PROJECTS]; // duplicated set for seamless wrap
-  const selectedIndex = selected ? PROJECTS.indexOf(selected) : -1;
+  const strips = [...projects, ...projects]; // duplicated set for seamless wrap
+  const selectedIndex = selected ? projects.indexOf(selected) : -1;
 
   return (
-    <section className="projects-section" id="projects">
+    <section className="projects-section" id={sectionId}>
       <div className="section-header">
-        <h2 className="serif reveal-text">EVIDENCE BOARD</h2>
+        <h2 className="serif reveal-text">{title}</h2>
         <div className="mono text-dim reveal-text section-header-meta">
-          SECTOR: WEB × DESIGN
+          {sectorMeta}
           <br />
           SCANNING: ACTIVE
         </div>
@@ -185,7 +193,7 @@ export default function EvidenceBoard() {
                     </div>
                   </div>
                   <div className="strip-details">
-                    <span className="strip-id">EVIDENCE #{pad((i % PROJECTS.length) + 1)}</span>
+                    <span className="strip-id">EVIDENCE #{pad((i % projects.length) + 1)}</span>
                     <div className="strip-title-wrap">
                       <h3 className="strip-title">{p.title}</h3>
                     </div>
@@ -200,14 +208,14 @@ export default function EvidenceBoard() {
           <div className="badge-barcode"></div>
           <div className="badge-content">
             <span className="badge-label">EVIDENCE ARCHIVE</span>
-            <span className="badge-count">{pad(PROJECTS.length)} FILES</span>
+            <span className="badge-count">{pad(projects.length)} {badgeLabel}</span>
           </div>
         </div>
       </div>
 
       {/* ---------------- LIST VIEW ---------------- */}
       <div className={`projects-list${view !== 'list' ? ' view-hidden' : ''}`}>
-        {PROJECTS.map((p, i) => (
+        {projects.map((p, i) => (
           <div className="project-list-item" key={p.id} onClick={() => openProject(p)} data-cursor-text="DECRYPT">
             <div className="list-item-bg">
               <img src={p.image} alt={p.title} loading="lazy" />
