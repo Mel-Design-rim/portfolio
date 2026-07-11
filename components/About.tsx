@@ -33,7 +33,7 @@ export default function About() {
                   textAnchor="middle"
                   fontFamily="monospace"
                   fontSize="13"
-                  fill="#ff2a2a"
+                  fill="#2a8dff"
                   letterSpacing="2"
                 >
                   CLASSIFIED

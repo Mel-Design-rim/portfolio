@@ -4,7 +4,7 @@
       <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1a1a1a" stroke-width="1"/>
     </pattern>
     <radialGradient id="glow" cx="50%" cy="38%" r="70%">
-      <stop offset="0%" stop-color="#2a0a0a"/>
+      <stop offset="0%" stop-color="#0a1a2a"/>
       <stop offset="60%" stop-color="#0a0a0a"/>
       <stop offset="100%" stop-color="#050505"/>
     </radialGradient>
@@ -12,12 +12,12 @@
   <rect width="800" height="1200" fill="url(#glow)"/>
   <rect width="800" height="1200" fill="url(#grid)"/>
   <rect x="60" y="60" width="680" height="1080" fill="none" stroke="#2a2a2a" stroke-width="1"/>
-  <text x="90" y="130" font-family="monospace" font-size="20" fill="#ff2a2a" letter-spacing="4">TOP SECRET // FILE</text>
+  <text x="90" y="130" font-family="monospace" font-size="20" fill="#2a8dff" letter-spacing="4">TOP SECRET // FILE</text>
   <text x="90" y="165" font-family="monospace" font-size="14" fill="#555" letter-spacing="3">CASE #2026 - NKC.MR</text>
   <text x="400" y="520" text-anchor="middle" font-family="Georgia, 'Playfair Display', serif" font-size="110" font-weight="bold" fill="#e8e8e8">ABSAT</text>
-  <line x1="150" y1="570" x2="650" y2="570" stroke="#ff2a2a" stroke-width="2"/>
+  <line x1="150" y1="570" x2="650" y2="570" stroke="#2a8dff" stroke-width="2"/>
   <text x="400" y="625" text-anchor="middle" font-family="monospace" font-size="22" fill="#888" letter-spacing="5">MEDIA PRODUCTION PLATFORM</text>
-  <text x="400" y="680" text-anchor="middle" font-family="monospace" font-size="16" fill="#ff2a2a" letter-spacing="3">[ NEXT.JS / DJANGO ]</text>
+  <text x="400" y="680" text-anchor="middle" font-family="monospace" font-size="16" fill="#2a8dff" letter-spacing="3">[ NEXT.JS / DJANGO ]</text>
   <g font-family="monospace" font-size="15" fill="#3a3a3a">
     <text x="90" y="960">&gt;&gt; initializing modules...</text>
     <text x="90" y="990">&gt;&gt; connecting database...</text>

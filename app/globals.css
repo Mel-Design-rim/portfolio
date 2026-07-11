@@ -1,7 +1,7 @@
 /* ============================================================
    MEL DESIGN — Tech-Noir portfolio theme
    Palette + type inspired by the "investigation" aesthetic:
-   dark #050505, accent red #ff2a2a, Playfair Display / mono
+   dark #050505, accent blue #2a8dff (Mel Design brand), Playfair Display / mono
    ============================================================ */
 :root {
   --bg: #050505;
@@ -12,8 +12,8 @@
   --text: #e0e0e0;
   --text-dim: #666;
   --text-darker: #444;
-  --accent-red: #ff2a2a;
-  --accent-red-dark: #cc2222;
+  --accent-red: #2a8dff;
+  --accent-red-dark: #1f6fd6;
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -216,7 +216,7 @@ img { max-width: 100%; display: block; }
 .thread-line {
   fill: none; stroke: var(--accent-red); stroke-width: 1.5;
   opacity: 0.85;
-  filter: drop-shadow(0 0 6px rgba(255, 42, 42, 0.6));
+  filter: drop-shadow(0 0 6px rgba(42, 141, 255, 0.6));
 }
 .pin { fill: var(--accent-red); }
 
@@ -247,7 +247,7 @@ section { position: relative; }
 }
 .scanner-line {
   position: absolute; left: 0; width: 100%; height: 1px; z-index: 1;
-  background: linear-gradient(90deg, transparent, rgba(255,42,42,0.7), transparent);
+  background: linear-gradient(90deg, transparent, rgba(42,141,255,0.7), transparent);
   opacity: 0.5; top: 0;
   animation: scanMove 7s ease-in-out infinite;
 }
@@ -305,7 +305,7 @@ section { position: relative; }
   font-size: 0.62rem; letter-spacing: 2px; color: #666; padding: 6px 10px;
   transition: color 0.25s, background 0.25s;
 }
-.view-mode-btn.active { color: #fff; background: rgba(255,42,42,0.12); }
+.view-mode-btn.active { color: #fff; background: rgba(42,141,255,0.12); }
 .view-mode-btn.active svg { color: var(--accent-red); }
 .view-mode-separator { width: 1px; height: 18px; background: var(--line); }
 .slider-controls { display: flex; align-items: center; gap: 4px; border: 1px solid var(--line); }
@@ -313,7 +313,7 @@ section { position: relative; }
   padding: 12px 16px; color: #888; transition: color 0.2s, background 0.2s;
   display: flex; align-items: center;
 }
-.slider-arrow:hover { color: #fff; background: rgba(255,42,42,0.15); }
+.slider-arrow:hover { color: #fff; background: rgba(42,141,255,0.15); }
 .controls-separator { width: 1px; height: 22px; background: var(--line); }
 
 .slider-container { position: relative; overflow: hidden; padding-bottom: 3.4rem; }
@@ -331,7 +331,7 @@ section { position: relative; }
   overflow: hidden; background: var(--bg-2);
   transition: border-color 0.3s;
 }
-.project-strip:hover .project-strip-inner { border-color: rgba(255,42,42,0.6); }
+.project-strip:hover .project-strip-inner { border-color: rgba(42,141,255,0.6); }
 .corner { position: absolute; width: 14px; height: 14px; z-index: 4; border-color: #555; border-style: solid; border-width: 0; transition: border-color 0.3s; }
 .corner.tl { top: 6px; left: 6px; border-top-width: 1px; border-left-width: 1px; }
 .corner.tr { top: 6px; right: 6px; border-top-width: 1px; border-right-width: 1px; }
@@ -340,8 +340,8 @@ section { position: relative; }
 .project-strip:hover .corner { border-color: var(--accent-red); }
 .strip-scan-line {
   position: absolute; left: 0; width: 100%; height: 1px; z-index: 3;
-  background: rgba(255,42,42,0.8); opacity: 0;
-  box-shadow: 0 0 12px rgba(255,42,42,0.8);
+  background: rgba(42,141,255,0.8); opacity: 0;
+  box-shadow: 0 0 12px rgba(42,141,255,0.8);
 }
 .project-strip:hover .strip-scan-line { opacity: 1; animation: stripScan 1.8s linear infinite; }
 @keyframes stripScan { 0% { top: 0; } 100% { top: 100%; } }
@@ -498,7 +498,7 @@ section { position: relative; }
   transition: border-color 0.25s, color 0.25s; background: rgba(15,15,15,0.5);
 }
 .tech-chip:hover { border-color: var(--accent-red); color: #eee; }
-.tech-chip.text-accent { border-color: rgba(255,42,42,0.5); }
+.tech-chip.text-accent { border-color: rgba(42,141,255,0.5); }
 
 /* ============================================================
    ABOUT — SUBJECT PROFILE
@@ -520,7 +520,7 @@ section { position: relative; }
 }
 .profiler-module::before {
   content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(255,42,42,0.45), transparent);
+  background: linear-gradient(90deg, transparent, rgba(42,141,255,0.45), transparent);
 }
 .identity-name { text-align: center; font-size: 0.8rem; letter-spacing: 3px; color: #ddd; margin-bottom: 1.4rem; }
 .fingerprint-scanner { position: relative; }
@@ -547,7 +547,7 @@ section { position: relative; }
 .data-bot { bottom: 8px; right: 8px; color: #888; }
 .scan-beam {
   position: absolute; left: 0; width: 100%; height: 40px; z-index: 4; top: 0;
-  background: linear-gradient(180deg, transparent, rgba(255,42,42,0.14), rgba(255,42,42,0.4), transparent);
+  background: linear-gradient(180deg, transparent, rgba(42,141,255,0.14), rgba(42,141,255,0.4), transparent);
   animation: beamScan 3.2s ease-in-out infinite;
 }
 @keyframes beamScan { 0% { top: -20%; } 50% { top: 100%; } 100% { top: -20%; } }
@@ -556,7 +556,7 @@ section { position: relative; }
 .id-key { color: #666; }
 .id-val { color: #ddd; }
 .status-wrapper {
-  display: block; position: relative; border: 1px solid rgba(255,42,42,0.5);
+  display: block; position: relative; border: 1px solid rgba(42,141,255,0.5);
   padding: 14px; overflow: hidden; transition: border-color 0.3s;
 }
 .status-wrapper:hover { border-color: var(--accent-red); }
@@ -579,8 +579,8 @@ section { position: relative; }
 .analysis-header span:last-child { color: #555; }
 .report-intro { font-size: 1.12rem; line-height: 1.7; margin-bottom: 2.6rem; color: #ccc; }
 .evidence-highlight {
-  color: #fff; border: 1px solid rgba(255,42,42,0.6); padding: 1px 7px;
-  background: rgba(255,42,42,0.08);
+  color: #fff; border: 1px solid rgba(42,141,255,0.6); padding: 1px 7px;
+  background: rgba(42,141,255,0.08);
 }
 .history-block { margin-bottom: 2.2rem; }
 .history-block h4 { font-size: 0.64rem; letter-spacing: 2px; color: #777; margin-bottom: 1.2rem; }
@@ -597,7 +597,7 @@ section { position: relative; }
 .cap-bottom { display: flex; align-items: center; justify-content: center; padding: 2rem; }
 .threat-level { text-align: center; }
 .alert-box { width: 90px; margin: 0 auto 1rem; position: relative; }
-.alert-svg .triangle-bg { fill: rgba(255,42,42,0.06); }
+.alert-svg .triangle-bg { fill: rgba(42,141,255,0.06); }
 .alert-svg .triangle-line {
   fill: none; stroke: var(--accent-red); stroke-width: 2;
   stroke-dasharray: 240; animation: triangleDraw 3s ease-in-out infinite alternate;
@@ -621,7 +621,7 @@ section { position: relative; }
 .icta-br { bottom: 10px; right: 10px; border-bottom-width: 1px; border-right-width: 1px; }
 .icta-scanline {
   position: absolute; left: 0; width: 100%; height: 1px;
-  background: rgba(255,42,42,0.5); animation: stripScan 4s linear infinite;
+  background: rgba(42,141,255,0.5); animation: stripScan 4s linear infinite;
 }
 .icta-grid {
   position: absolute; inset: 0; opacity: 0.4;
@@ -642,7 +642,7 @@ section { position: relative; }
 .icta-cube-container { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; perspective: 500px; }
 .icta-cube { position: relative; width: 56px; height: 56px; transform-style: preserve-3d; animation: cubeSpin 9s linear infinite; }
 @keyframes cubeSpin { from { transform: rotateX(-20deg) rotateY(0); } to { transform: rotateX(-20deg) rotateY(360deg); } }
-.icta-face { position: absolute; width: 56px; height: 56px; border: 1px solid var(--accent-red); background: rgba(255,42,42,0.05); }
+.icta-face { position: absolute; width: 56px; height: 56px; border: 1px solid var(--accent-red); background: rgba(42,141,255,0.05); }
 .icta-front { transform: translateZ(28px); }
 .icta-back { transform: rotateY(180deg) translateZ(28px); }
 .icta-left { transform: rotateY(-90deg) translateZ(28px); }
@@ -650,7 +650,7 @@ section { position: relative; }
 .icta-top { transform: rotateX(90deg) translateZ(28px); }
 .icta-bottom { transform: rotateX(-90deg) translateZ(28px); }
 .icta-orbit-ring {
-  position: absolute; inset: 0; border: 1px dashed rgba(255,42,42,0.3); border-radius: 50%;
+  position: absolute; inset: 0; border: 1px dashed rgba(42,141,255,0.3); border-radius: 50%;
   animation: orbitSpin 12s linear infinite;
 }
 .icta-orbit-2 { inset: -16px; animation-duration: 20s; animation-direction: reverse; }
