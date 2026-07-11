@@ -38,7 +38,7 @@ export default function Hero() {
         .to(floats, { opacity: 1, duration: 0.8, stagger: 0.15 }, '-=0.5');
     };
     window.addEventListener(LOADER_DONE_EVENT, enter);
-    const fallback = setTimeout(enter, 4200);
+    const fallback = setTimeout(enter, 3000);
 
     // mouse parallax
     const setters = Array.from(floats).map((el, i) => ({

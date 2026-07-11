@@ -6,25 +6,27 @@ import gsap from 'gsap';
 export default function Cursor() {
   const mainRef = useRef<HTMLDivElement>(null);
   const dataRef = useRef<HTMLDivElement>(null);
-  const [coords, setCoords] = useState('X: 0 Y: 0');
+  const coordsRef = useRef<HTMLSpanElement>(null);
   const [label, setLabel] = useState('');
 
   useEffect(() => {
     const main = mainRef.current;
     const data = dataRef.current;
-    if (!main || !data) return;
+    const coords = coordsRef.current;
+    if (!main || !data || !coords) return;
 
     const xTo = gsap.quickTo(main, 'x', { duration: 0.18, ease: 'power3.out' });
     const yTo = gsap.quickTo(main, 'y', { duration: 0.18, ease: 'power3.out' });
     const xDataTo = gsap.quickTo(data, 'x', { duration: 0.4, ease: 'power3.out' });
     const yDataTo = gsap.quickTo(data, 'y', { duration: 0.4, ease: 'power3.out' });
 
+    // direct DOM writes — no React re-render per mousemove
     const onMove = (e: MouseEvent) => {
       xTo(e.clientX);
       yTo(e.clientY);
       xDataTo(e.clientX);
       yDataTo(e.clientY);
-      setCoords(`X: ${e.clientX} Y: ${e.clientY}`);
+      coords.textContent = `X: ${e.clientX} Y: ${e.clientY}`;
     };
 
     const onOver = (e: MouseEvent) => {
@@ -53,7 +55,7 @@ export default function Cursor() {
         </div>
       </div>
       <div className="cursor-data" ref={dataRef}>
-        <span>{coords}</span>
+        <span ref={coordsRef}>X: 0 Y: 0</span>
       </div>
     </>
   );

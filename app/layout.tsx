@@ -5,19 +5,19 @@ import './globals.css';
 const playfair = Playfair_Display({
   subsets: ['latin'],
   variable: '--font-serif',
-  weight: ['400', '500', '600', '700', '800', '900'],
+  weight: ['600', '700'],
 });
 
 const rethink = Rethink_Sans({
   subsets: ['latin'],
   variable: '--font-sans',
-  weight: ['400', '500', '600', '700', '800'],
+  weight: ['400', '800'],
 });
 
 const spaceMono = Space_Mono({
   subsets: ['latin'],
   variable: '--font-mono',
-  weight: ['400', '700'],
+  weight: '400',
 });
 
 const mrDafoe = Mr_Dafoe({

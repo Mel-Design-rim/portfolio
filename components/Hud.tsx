@@ -1,18 +1,21 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useRef } from 'react';
 
 export default function Hud() {
-  const [time, setTime] = useState('00:00:00:00');
+  const timeRef = useRef<HTMLSpanElement>(null);
 
   useEffect(() => {
+    // direct DOM write — avoids a React re-render every tick
     const tick = () => {
+      const el = timeRef.current;
+      if (!el) return;
       const d = new Date();
       const pad = (n: number) => String(n).padStart(2, '0');
       const frames = pad(Math.floor((d.getMilliseconds() / 1000) * 24));
-      setTime(`${pad(d.getHours())}:${pad(d.getMinutes())}:${pad(d.getSeconds())}:${frames}`);
+      el.textContent = `${pad(d.getHours())}:${pad(d.getMinutes())}:${pad(d.getSeconds())}:${frames}`;
     };
-    const id = setInterval(tick, 90);
+    const id = setInterval(tick, 120);
     tick();
     return () => clearInterval(id);
   }, []);
@@ -24,7 +27,7 @@ export default function Hud() {
         <span className="text-accent hud-sub">SIGNAL_STRONG</span>
       </div>
       <div className="hud-corner hud-tr">
-        <span suppressHydrationWarning>{time}</span>
+        <span ref={timeRef}>00:00:00:00</span>
         <br />
         <span>ISO 800</span>
       </div>

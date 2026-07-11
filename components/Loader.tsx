@@ -46,7 +46,7 @@ export default function Loader() {
     const tl = gsap.timeline();
     tl.to(counterObj, {
       v: 100,
-      duration: 2.1,
+      duration: 1.2,
       ease: 'power2.inOut',
       onUpdate: () => setCounter(Math.round(counterObj.v)),
     })
@@ -55,10 +55,10 @@ export default function Loader() {
         clearInterval(freqInterval);
         clearInterval(lineInterval);
       })
-      .to(wrap.querySelector('.loader-ui-layer'), { opacity: 0, duration: 0.35 }, '+=0.35')
-      .to(wrap.querySelector('.loader-info'), { opacity: 0, duration: 0.3 }, '<')
-      .to(wrap.querySelector('.curtain-top'), { yPercent: -100, duration: 1, ease: 'power4.inOut' }, '<0.1')
-      .to(wrap.querySelector('.curtain-bottom'), { yPercent: 100, duration: 1, ease: 'power4.inOut' }, '<')
+      .to(wrap.querySelector('.loader-ui-layer'), { opacity: 0, duration: 0.25 }, '+=0.2')
+      .to(wrap.querySelector('.loader-info'), { opacity: 0, duration: 0.25 }, '<')
+      .to(wrap.querySelector('.curtain-top'), { yPercent: -100, duration: 0.85, ease: 'power4.inOut' }, '<0.05')
+      .to(wrap.querySelector('.curtain-bottom'), { yPercent: 100, duration: 0.85, ease: 'power4.inOut' }, '<')
       .add(() => {
         wrap.classList.add('is-done');
         window.dispatchEvent(new Event(LOADER_DONE_EVENT));
