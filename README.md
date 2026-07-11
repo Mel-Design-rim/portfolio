@@ -1,36 +1,57 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# MEL DESIGN — Portfolio
+
+> TOP SECRET // CASE #2026 — a tech-noir investigation-themed portfolio.
+
+Personal portfolio of **Mel Design Rim** (Cheikh Malaynine Aboubacrin) — Fullstack Developer & Digital Designer based in Nouakchott, Mauritania.
+
+**Design language:** dark evidence-board aesthetic — HUD overlays, custom cursor, red investigation thread drawn on scroll, decryption loader and an "EVIDENCE BOARD" project slider.
+
+## Tech Stack
+
+- [Next.js](https://nextjs.org) (App Router) + TypeScript
+- [GSAP](https://gsap.com) + ScrollTrigger — reveals, thread drawing, entrance animations
+- [Lenis](https://lenis.darkroom.engineering) — smooth scrolling
+- `next/font` — Playfair Display, Rethink Sans, Space Mono
+- Pure CSS (custom properties, no UI framework)
+
+## Project Structure
+
+```
+app/
+  layout.tsx        # fonts + metadata
+  page.tsx          # page composition
+  globals.css       # full tech-noir theme
+components/
+  Effects.tsx       # Lenis + scroll reveals + marquee
+  Loader.tsx        # decryption loader (curtains, terminal, counter)
+  Hud.tsx           # fixed HUD corners (REC, timecode, live feed)
+  Cursor.tsx        # custom cursor + coordinates readout
+  Thread.tsx        # red thread SVG drawn while scrolling
+  Hero.tsx          # hero with spotlight + floating evidence items
+  EvidenceBoard.tsx # projects slider/list + project viewer + lightbox
+  About.tsx         # SUBJECT PROFILE (identity / report / skills)
+  GithubCta.tsx     # source-mode CTA
+  Contact.tsx       # INITIATE CONTACT terminal
+lib/
+  projects.ts       # all project (evidence) data
+public/assets/
+  images/           # project artwork & covers
+```
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev       # http://localhost:3000
+npm run build     # production build
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Contact
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Email:** mel.design.rim@gmail.com
+- **GitHub:** [@Mel-Design-rim](https://github.com/Mel-Design-rim)
+- **LinkedIn:** [cheikhmalaynineaboubacrin](https://www.linkedin.com/in/cheikhmalaynineaboubacrin)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+© 2026 MEL DESIGN RIM — SECURE LINE ESTABLISHED
