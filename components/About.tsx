@@ -1,12 +1,17 @@
+'use client';
+
+import { useLang } from '@/lib/i18n';
+
 export default function About() {
+  const { t } = useLang();
   return (
     <section className="about-section" id="about">
       <div className="section-header about-header">
-        <h2 className="serif">SUBJECT PROFILE</h2>
+        <h2 className="serif">{t.about.title}</h2>
         <div className="mono text-dim section-header-meta">
-          CASE FILE: MD-222
+          {t.about.caseFile}
           <br />
-          STATUS: STUDYING / BUILDING
+          {t.about.status}
         </div>
       </div>
 
@@ -61,93 +66,105 @@ export default function About() {
             <div className="status-header mono">
               <span className="status-dot"></span> SYSTEM_ALERT
             </div>
-            <div className="status-main">OPEN TO WORK</div>
+            <div className="status-main">{t.about.openToWork}</div>
             <div className="status-footer mono">
-              <span>{'// CONTRACTS: ENABLED'}</span>
-              <span>[REMOTE_READY]</span>
+              <span>{t.about.contracts}</span>
+              <span>{t.about.remote}</span>
             </div>
+          </a>
+          <a
+            href="/assets/cv/cheikh-malaynine-aboubacrine-cv.pdf"
+            download
+            className="cv-download mono"
+            data-cursor-text="GET_FILE"
+          >
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+              <polyline points="7 10 12 15 17 10" />
+              <line x1="12" y1="15" x2="12" y2="3" />
+            </svg>
+            {t.about.downloadCv}
           </a>
         </div>
 
         {/* -------- analysis report -------- */}
         <div className="profiler-module col-behavior" data-reveal data-reveal-delay="0.1">
           <div className="analysis-header mono">
-            <span>COMPETENCE_ANALYSIS_REPORT</span>
-            <span>[READ_ONLY]</span>
+            <span>{t.about.report}</span>
+            <span>{t.about.readonly}</span>
           </div>
           <div className="psych-report">
             <p className="report-intro">
-              Hybrid profile merging <span className="evidence-highlight">code</span>,{' '}
-              <span className="evidence-highlight">AI</span> and{' '}
-              <span className="evidence-highlight">visual production</span>. I don&apos;t just build websites — I
-              design complete digital experiences, from the database schema to the final pixel.
+              {t.about.intro1}<span className="evidence-highlight">{t.about.introCode}</span>{t.about.intro2}
+              <span className="evidence-highlight">{t.about.introAI}</span>{t.about.intro3}
+              <span className="evidence-highlight">{t.about.introVisual}</span>{t.about.intro4}
             </p>
 
             <div className="history-block">
-              <h4 className="mono">{'// ACADEMIC_LOG [EDUCATION]'}</h4>
+              <h4 className="mono">{t.about.academicLog}</h4>
               <div className="history-item">
                 <div className="history-header mono">
                   <span className="history-date">[UNIV. NOUAKCHOTT]</span>
                   <span className="history-period">2023—NOW</span>
                 </div>
-                <div>LICENCE DA2I — Web Development, Internet &amp; Intranet Administration</div>
+                <div>{t.about.uniLine}</div>
               </div>
               <div className="history-item">
                 <div className="history-header mono">
                   <span className="history-date">[BACCALAURÉAT]</span>
                   <span className="history-period">2023</span>
                 </div>
-                <div>SERIES MATHEMATICS</div>
+                <div>{t.about.bacLine}</div>
               </div>
             </div>
 
             <div className="history-block">
-              <h4 className="mono">{'// FIELD_OPERATIONS [EXPERIENCE]'}</h4>
+              <h4 className="mono">{t.about.fieldOps}</h4>
               <div className="history-item">
                 <div className="history-header mono">
                   <span className="history-date">[AGENCE D&apos;INFO INDÉPENDANTE]</span>
                   <span className="history-period">MEDIA</span>
                 </div>
-                <div>Media production, visuals &amp; AI-powered newsroom workflows (Absat)</div>
+                <div>{t.about.agenceLine}</div>
               </div>
               <div className="history-item">
                 <div className="history-header mono">
                   <span className="history-date">[i3M AGENCY]</span>
                   <span className="history-period">DESIGN</span>
                 </div>
-                <div>Graphic design, visual identity &amp; digital content production</div>
+                <div>{t.about.i3mLine}</div>
               </div>
               <div className="history-item">
                 <div className="history-header mono">
                   <span className="history-date">[SERVIPROD / RIADA]</span>
                   <span className="history-period">AUDIOVISUAL</span>
                 </div>
-                <div>Video production, editing &amp; creative coordination</div>
+                <div>{t.about.serviLine}</div>
               </div>
               <div className="history-item">
                 <div className="history-header mono">
                   <span className="history-date">[IMTIYAZ / BACHAER]</span>
                   <span className="history-period">EDU × MEDIA</span>
                 </div>
-                <div>Educational content, communication &amp; media supports</div>
+                <div>{t.about.imtiyazLine}</div>
               </div>
             </div>
 
             <div className="history-block">
-              <h4 className="mono">{'// COMMUNITY_OPS [ENGAGEMENT]'}</h4>
+              <h4 className="mono">{t.about.communityOps}</h4>
               <div className="history-item">
                 <div className="history-header mono">
                   <span className="history-date">[TECHFORGE CLUB]</span>
                   <span className="history-period">TECH</span>
                 </div>
-                <div>Development, AI &amp; innovation workshops — Univ. Nouakchott</div>
+                <div>{t.about.techforgeLine}</div>
               </div>
               <div className="history-item">
                 <div className="history-header mono">
                   <span className="history-date">[SAFA / CHABIBA]</span>
                   <span className="history-period">CULTURE</span>
                 </div>
-                <div>Cultural &amp; civic initiatives, event organization</div>
+                <div>{t.about.safaLine}</div>
               </div>
             </div>
           </div>
@@ -156,9 +173,9 @@ export default function About() {
         {/* -------- capabilities -------- */}
         <div className="col-capabilities-wrapper">
           <div className="profiler-module cap-top" data-reveal data-reveal-delay="0.2">
-            <div className="mono equipment-label">EQUIPMENT_INVENTORY</div>
+            <div className="mono equipment-label">{t.about.equipment}</div>
             <div className="tech-category">
-              <span className="cat-title text-accent mono">HARD SKILLS</span>
+              <span className="cat-title text-accent mono">{t.about.hardSkills}</span>
               <div className="chips-grid">
                 <div className="tech-chip">React</div>
                 <div className="tech-chip">Next.js</div>
@@ -176,14 +193,11 @@ export default function About() {
               </div>
             </div>
             <div className="tech-category">
-              <span className="cat-title mono">SOFT SKILLS</span>
+              <span className="cat-title mono">{t.about.softSkills}</span>
               <div className="chips-grid">
-                <div className="tech-chip">Problem Solving</div>
-                <div className="tech-chip">Autonomy</div>
-                <div className="tech-chip">Creativity</div>
-                <div className="tech-chip">Versatility</div>
-                <div className="tech-chip">Documentation</div>
-                <div className="tech-chip">Team Work</div>
+                {t.about.soft.map((skill) => (
+                  <div className="tech-chip" key={skill}>{skill}</div>
+                ))}
               </div>
             </div>
           </div>
@@ -197,7 +211,7 @@ export default function About() {
                   <circle className="alert-mark-dot" cx="50" cy="73" r="3"></circle>
                 </svg>
               </div>
-              <div className="mono text-accent threat-text">CREATIVITY: HIGH</div>
+              <div className="mono text-accent threat-text">{t.about.creativity}</div>
             </div>
           </div>
         </div>

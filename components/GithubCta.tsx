@@ -1,4 +1,9 @@
+'use client';
+
+import { useLang } from '@/lib/i18n';
+
 export default function GithubCta() {
+  const { t } = useLang();
   return (
     <section className="immersive-cta-section">
       <div className="immersive-cta-inner" data-reveal>
@@ -24,12 +29,9 @@ export default function GithubCta() {
             <div className="icta-orbit-ring icta-orbit-2"></div>
           </div>
           <div className="immersive-cta-text">
-            <div className="icta-label mono">PROTOCOL_ALT {'//'} SOURCE_MODE</div>
-            <h3 className="icta-title serif">This portfolio also exists in code</h3>
-            <p className="icta-desc">
-              Inspect the raw evidence. Repositories, commits and experiments — the full investigation trail is
-              public on GitHub.
-            </p>
+            <div className="icta-label mono">{t.cta.label}</div>
+            <h3 className="icta-title serif">{t.cta.title}</h3>
+            <p className="icta-desc">{t.cta.desc}</p>
             <a
               href="https://github.com/Mel-Design-rim"
               className="icta-btn mono"
@@ -37,23 +39,23 @@ export default function GithubCta() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <span className="icta-btn-icon">▷</span>ACCESS GITHUB<span className="icta-btn-arrow">→</span>
+              <span className="icta-btn-icon">▷</span>{t.cta.btn}<span className="icta-btn-arrow">→</span>
             </a>
           </div>
           <div className="immersive-cta-meta mono">
             <div className="icta-meta-item">
-              <span className="icta-meta-label">STATUS</span>
+              <span className="icta-meta-label">{t.cta.status}</span>
               <span className="icta-meta-val">
-                <span className="icta-live-dot"></span>ONLINE
+                <span className="icta-live-dot"></span>{t.cta.online}
               </span>
             </div>
             <div className="icta-meta-item">
-              <span className="icta-meta-label">HANDLE</span>
+              <span className="icta-meta-label">{t.cta.handle}</span>
               <span className="icta-meta-val">@MEL-DESIGN-RIM</span>
             </div>
             <div className="icta-meta-item">
-              <span className="icta-meta-label">ACCESS</span>
-              <span className="icta-meta-val">PUBLIC</span>
+              <span className="icta-meta-label">{t.cta.access}</span>
+              <span className="icta-meta-val">{t.cta.public}</span>
             </div>
           </div>
         </div>

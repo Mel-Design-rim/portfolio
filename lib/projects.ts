@@ -150,7 +150,7 @@ export const PROJECTS: Project[] = [
     intervention:
       'I designed the logo from research sketches to the final vector crest, and produced the identity presentation: meaning diagram, variations, and social media assets.',
     links: [],
-    evidence: ['/assets/images/sava-2.jpg', '/assets/images/sava-3.jpg'],
+    evidence: ['/assets/images/sava-2.jpg', '/assets/images/sava-3.jpg', '/assets/images/sava-4.jpg', '/assets/images/sava-5.jpg', '/assets/images/sava-6.jpg', '/assets/images/sava-7.jpg', '/assets/images/sava-8.jpg', '/assets/images/sava-9.jpg', '/assets/images/sava-10.jpg', '/assets/images/sava-11.jpg', '/assets/images/sava-12.jpg', '/assets/images/sava-13.jpg'],
   },
   {
     id: 'kalimat',
@@ -171,7 +171,7 @@ export const PROJECTS: Project[] = [
     intervention:
       'I conceived the series concept and designed every piece: word selection, typographic manipulation and the consistent visual system signed under the Mel Design identity.',
     links: [],
-    evidence: ['/assets/images/kalimat-2.jpg', '/assets/images/kalimat-3.jpg'],
+    evidence: ['/assets/images/kalimat-2.jpg', '/assets/images/kalimat-3.jpg', '/assets/images/kalimat-4.jpg', '/assets/images/kalimat-5.jpg', '/assets/images/kalimat-6.jpg', '/assets/images/kalimat-7.jpg', '/assets/images/kalimat-8.jpg', '/assets/images/kalimat-9.jpg'],
   },
   {
     id: 'techforge',
@@ -193,6 +193,34 @@ export const PROJECTS: Project[] = [
       'I designed the club logo, built the full green/gold visual system, and produced the roll-up: layout, 3D-style illustration integration, bilingual copy setting and print preparation.',
     links: [],
     evidence: ['/assets/images/design-1.jpg'],
+  },
+  {
+    id: 'posters',
+    category: 'design',
+    title: 'Poster Series',
+    type: 'Social Media Design',
+    image: '/assets/images/poster-mawlid.jpg',
+    year: '2023—2026',
+    context: 'Professional & Community',
+    client: 'Various Clients',
+    duration: 'Continuous',
+    tags: ['Posters', 'Arabic Calligraphy', 'Social Media', 'Events'],
+    stack: ['Compositing', 'Calligraphy Layout', 'Brand Systems'],
+    mission:
+      'An ongoing series of posters and social media designs for media agencies, associations and cultural events — announcements, religious occasions, campaigns and broadcast promos.',
+    analysis:
+      'Each poster balances Arabic typography and calligraphy with strong imagery: 3D renders, lantern and mosque compositions, bilingual layouts and clear information hierarchy, adapted to each client\'s identity system.',
+    intervention:
+      'I designed every piece end to end: concept, composition, typography, color system and final production for print and social platforms.',
+    links: [],
+    evidence: [
+      '/assets/images/poster-mawlid-event.jpg',
+      '/assets/images/poster-chabiba-camp.jpg',
+      '/assets/images/poster-alakhbar-countdown.jpg',
+      '/assets/images/alakhbar-promo.jpg',
+      '/assets/images/design-2.jpg',
+      '/assets/images/design-3.jpg',
+    ],
   },
 ];
 

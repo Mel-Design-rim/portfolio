@@ -5,6 +5,7 @@
 import { useCallback, useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { VIDEOS } from '@/lib/videos';
+import { useLang } from '@/lib/i18n';
 
 const pad = (n: number) => String(n).padStart(2, '0');
 
@@ -13,6 +14,7 @@ const pad = (n: number) => String(n).padStart(2, '0');
  * Each tape links out to the original video (YouTube / Facebook).
  */
 export default function MotionFeed() {
+  const { t } = useLang();
   const trackRef = useRef<HTMLDivElement>(null);
   const posRef = useRef(0);
   const setWidthRef = useRef(0);
@@ -74,18 +76,18 @@ export default function MotionFeed() {
   return (
     <section className="projects-section motion-section" id="motion">
       <div className="section-header">
-        <h2 className="serif reveal-text">SURVEILLANCE FEED</h2>
+        <h2 className="serif reveal-text">{t.motion.title}</h2>
         <div className="mono text-dim reveal-text section-header-meta">
-          SECTOR: MOTION / VIDEO
+          {t.motion.sector}
           <br />
-          PLAYBACK: READY
+          {t.motion.playback}
         </div>
       </div>
       <div className="reveal-line"></div>
 
       <div className="projects-controls-bar">
         <div className="motion-caption mono">
-          VIDEO EDITING × MOTION DESIGN × BROADCAST — TAPES LINK TO ORIGINAL FOOTAGE
+          {t.motion.caption}
         </div>
         <div className="slider-controls">
           <button className="slider-arrow" onClick={() => step(-1)} aria-label="Previous tape" data-cursor-text="PREV">
@@ -160,8 +162,8 @@ export default function MotionFeed() {
         <div className="slider-badge">
           <div className="badge-barcode"></div>
           <div className="badge-content">
-            <span className="badge-label">FOOTAGE ARCHIVE</span>
-            <span className="badge-count">{pad(VIDEOS.length)} TAPES</span>
+            <span className="badge-label">{t.motion.archive}</span>
+            <span className="badge-count">{pad(VIDEOS.length)} {t.motion.tapes}</span>
           </div>
         </div>
       </div>

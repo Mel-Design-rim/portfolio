@@ -1,4 +1,6 @@
 import Effects from '@/components/Effects';
+import LangSwitcher from '@/components/LangSwitcher';
+import { LangProvider } from '@/lib/i18n';
 import MotionFeed from '@/components/MotionFeed';
 import { DEV_PROJECTS, DESIGN_PROJECTS } from '@/lib/projects';
 import Loader from '@/components/Loader';
@@ -8,12 +10,13 @@ import Thread from '@/components/Thread';
 import Hero from '@/components/Hero';
 import EvidenceBoard from '@/components/EvidenceBoard';
 import About from '@/components/About';
+import Credentials from '@/components/Credentials';
 import GithubCta from '@/components/GithubCta';
 import Contact from '@/components/Contact';
 
 export default function Home() {
   return (
-    <>
+    <LangProvider>
       {/* hidden SEO block */}
       <section className="sr-only">
         <h1>Cheikh Malainine Aboubacrin — Fullstack Developer &amp; Digital Designer in Nouakchott, Mauritania</h1>
@@ -34,30 +37,20 @@ export default function Home() {
       <Effects />
       <Loader />
       <Hud />
+      <LangSwitcher />
       <Cursor />
       <Thread />
 
       <main>
         <Hero />
-        <EvidenceBoard
-          sectionId="projects"
-          title="EVIDENCE BOARD"
-          sectorMeta="SECTOR: DEV_OPS"
-          badgeLabel="REPOS"
-          projects={DEV_PROJECTS}
-        />
-        <EvidenceBoard
-          sectionId="production"
-          title="PRODUCTION ARCHIVE"
-          sectorMeta="SECTOR: DESIGN_OPS"
-          badgeLabel="ARTWORKS"
-          projects={DESIGN_PROJECTS}
-        />
+        <EvidenceBoard sectionId="projects" boardKey="dev" projects={DEV_PROJECTS} />
+        <EvidenceBoard sectionId="production" boardKey="design" projects={DESIGN_PROJECTS} />
         <MotionFeed />
         <About />
+        <Credentials />
         <GithubCta />
         <Contact />
       </main>
-    </>
+    </LangProvider>
   );
 }

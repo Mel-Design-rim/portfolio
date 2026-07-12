@@ -3,9 +3,11 @@
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { LOADER_DONE_EVENT } from './Loader';
+import { useLang } from '@/lib/i18n';
 
 export default function Hero() {
   const heroRef = useRef<HTMLElement>(null);
+  const { t } = useLang();
 
   useEffect(() => {
     const hero = heroRef.current;
@@ -93,7 +95,7 @@ export default function Hero() {
       </div>
 
       <div className="hero-content">
-        <div className="hero-label mono uppercase">Top Secret // Case #2026</div>
+        <div className="hero-label mono uppercase">{t.hero.label}</div>
         <h1 className="hero-title serif">
           <span className="hero-script">Cheikh</span>
           <br />
@@ -102,11 +104,11 @@ export default function Hero() {
           <span className="hero-layer-front">ABOUBACRINE</span>
         </h1>
         <div className="hero-subtitle">
-          <span>Fullstack</span> Developer &amp; <span>Digital</span> Designer.
+          <span>{t.hero.sub1a}</span>{t.hero.sub1b}<span>{t.hero.sub1c}</span>{t.hero.sub1d}
           <br />
-          <span>Backend</span> Rigor, <span>Frontend</span>{' '}Interactivity &amp; Visual Production.
+          <span>{t.hero.sub2a}</span>{t.hero.sub2b}<span>{t.hero.sub2c}</span>{t.hero.sub2d}
           <br />
-          Open to opportunities.
+          {t.hero.sub3}
         </div>
       </div>
     </section>
